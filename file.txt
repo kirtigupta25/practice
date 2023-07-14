@@ -1,0 +1,39 @@
+select * from stu_data_1
+create table stu_data_1(rno numeric(11), fname varchar(30), lname varchar(30)) 
+ 
+insert into stu_data_1 values(11,'Anu','sharmaa') 
+ 
+insert into stu_data_1 values (13,'varc','arun') 
+ 
+select * from stu_data_1
+select length(fname) from stu_data_1 
+select lpad(fname,10,'dear') from stu_data_1
+select rpad(fname,10,'dear') from stu_data_1
+select rtrim('kirti        ') from stu_data_1;
+select ltrim('         kirti') from stu_data_1;
+select * from stu_data_1;
+select replace(fname,'A','k') from stu_data_1;       --this is case sensitive
+select lower(fname) from stu_data_1;
+select upper(fname) from stu_data_1;
+select substr(lname,2,3) from stu_data_1;     --indexing is from 1 and start from 2 and extract 3 character
+select initcap(fname) from stu_data_1;
+--question number 2 
+Select GetDate()  from stu_data_1;
+--question number 3
+create table emp(name varchar(5),salary numeric(11),commission numeric(11) );
+insert into emp values('kirti',100000,345);
+insert into emp values('mahi',10000,879);
+select name,salary+commission from emp;
+ALTER TABLE emp ADD year numeric(5);
+insert into emp values('kirti',100000,345,2000);
+insert into emp values('mahi',10000,879,1985);
+insert into emp values('manat',200000,345,1985);
+insert into emp values('aman',10000,879,1985);
+insert into emp values('ava',200000,345,2023);
+insert into emp values('roop',10000,879,2023);
+select * from emp where year=1985;
+select * from emp where year=CURDATE();
+
+
+
+
